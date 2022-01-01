@@ -28,7 +28,7 @@ Install the **devkitARM** toolchain of [devkitPro](https://devkitpro.org/wiki/Ge
 
 To set up the repository:
 
-    git clone https://github.com/pret/pokefirered
+    git clone https://github.com/ConfuzzedCat/pokefirered
     git clone https://github.com/pret/agbcc
 
     cd ./agbcc
@@ -41,9 +41,6 @@ To build **pokefirered.gba**:
 
     make -j$(nproc)
 
-To confirm it matches the official ROM image while building, do this instead:
-
-    make compare -j$(nproc)
 
 If only `.c` or `.s` files were changed, turn off the dependency scanning temporarily. Changes to any other files will be ignored and the build will either fail or not reflect those changes.
 
