@@ -28,7 +28,7 @@ Install the **devkitARM** toolchain of [devkitPro](https://devkitpro.org/wiki/Ge
 
 To set up the repository:
 
-    git clone https://github.com/ConfuzzedCat/pokefirered
+    git clone https://github.com/ConfuzzedCat/pokefirered-levelReqRandomized
     git clone https://github.com/pret/agbcc
 
     cd ./agbcc
