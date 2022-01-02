@@ -37,6 +37,7 @@
 #include "constants/abilities.h"
 #include "constants/pokemon.h"
 #include "constants/maps.h"
+#include "random.h"
 
 #define DEFENDER_IS_PROTECTED ((gProtectStructs[gBattlerTarget].protected) && (gBattleMoves[gCurrentMove].flags & FLAG_PROTECT_AFFECTED))
 
@@ -3105,7 +3106,7 @@ static void atk23_getexp(void)
                         ++viaExpShare;
                 }
             }
-            calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+            calculatedExp = Random();
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
