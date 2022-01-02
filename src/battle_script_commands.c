@@ -3089,6 +3089,7 @@ static void atk23_getexp(void)
     case 1: // calculate experience points to redistribute
         {
             u16 calculatedExp;
+            u16 randomInt = Random();
             s32 viaSentIn;
 
             for (viaSentIn = 0, i = 0; i < PARTY_SIZE; ++i)
@@ -3106,7 +3107,10 @@ static void atk23_getexp(void)
                         ++viaExpShare;
                 }
             }
-            calculatedExp = Random();
+            if (randomInt >= 2000) {
+                randomInt = randomInt / 1000 + 1
+            }
+            calculatedExp =  randomInt;
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
