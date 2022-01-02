@@ -3108,11 +3108,11 @@ static void atk23_getexp(void)
                         ++viaExpShare;
                 }
             }
-            while (randomInt > (2000/_level)) {
+            while (randomInt > (200*_level)) {
                 randomInt = Random();
             }
             
-            calculatedExp = _level;//randomInt;
+            calculatedExp = randomInt;
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
