@@ -1,6 +1,6 @@
-# Pokémon FireRed and LeafGreen - LevelReq Randomized
+# Pokémon FireRed and LeafGreen - Exp Randomized
 
-To download the game, just download it from ['Releases'](https://github.com/ConfuzzedCat/pokefirered-ExpRandomized/releases/latest)
+To download the latest build click [here](https://github.com/ConfuzzedCat/pokefirered-ExpRandomized/releases/latest/download/pokefirered.gba)
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 ## See also
@@ -23,4 +23,4 @@ Other disassembly and/or decompilation projects:
 
 ## Contacts
 
-You can find us(the original authors, not me.) on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+You can find us (the original authors, not me.) on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
