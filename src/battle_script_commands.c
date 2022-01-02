@@ -3108,7 +3108,7 @@ static void atk23_getexp(void)
                 }
             }
             if (randomInt >= 2000) {
-                randomInt = randomInt / 1000 + 1;
+                randomInt = randomInt / 100 + 1;
             }
             calculatedExp =  randomInt;
             if (viaExpShare) // at least one mon is getting exp via exp share
