@@ -42,11 +42,6 @@ To build **pokefirered.gba**:
 
     make -j$(nproc)
 
-
-If only `.c` or `.s` files were changed, turn off the dependency scanning temporarily. Changes to any other files will be ignored and the build will either fail or not reflect those changes.
-
-    make -j$(nproc) NODEP=1
-
 Convenient targets have been defined to build Pokémon LeafGreen and the 1.1 revisions of both games:
 
     # LeafGreen 1.0
@@ -55,10 +50,6 @@ Convenient targets have been defined to build Pokémon LeafGreen and the 1.1 rev
     make -j$(nproc) firered_rev1
     # LeafGreen 1.1
     make -j$(nproc) leafgreen_rev1
-
-To confirm these match the respective official ROM images, prefix `compare_` to each target name. For example:
-
-    make -j$(nproc) compare_leafgreen
 
 **Note:** If the build command is not recognized on Linux, including the Linux environment used within Windows, run `nproc` and replace `$(nproc)` with the returned value (e.g.: `make -j4`). Because `nproc` is not available on macOS, the alternative is `sysctl -n hw.ncpu`.
 
