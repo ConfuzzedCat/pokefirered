@@ -3090,6 +3090,8 @@ static void atk23_getexp(void)
         {
             u16 calculatedExp;
             u16 randomInt = Random();
+            u16 _randomInt = Random();
+            u16 randDiff = (randomInt > _randomInt) ? (randomInt - _randomInt) : (_randomInt - randomInt);
             u16 _level = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
             s32 viaSentIn;
 
@@ -3108,11 +3110,13 @@ static void atk23_getexp(void)
                         ++viaExpShare;
                 }
             }
-            while (randomInt > (200*_level)) {
+            while (randDiff > (200*_level)) {
                 randomInt = Random();
+                _randomInt = Random();
+                randDiff = (randomInt > _randomInt) ? (randomInt - _randomInt) : (_randomInt - randomInt);
             }
             
-            calculatedExp = randomInt;
+            calculatedExp = randDiff/8 +1;
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
